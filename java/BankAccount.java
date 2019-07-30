@@ -1,16 +1,15 @@
 package basicJavaPrograms;
 
 public class BankAccount {
-	int accountNumber = 123456789;
-	double balance = 50.0;
-	String customerName = "Jesse Shen";
-	String email = "zephyrstx@gmail.com";
-	String phoneNumber = "4086566106";
+	private int accountNumber = 123456789;
+	private double balance = 50.0;
+	private String customerName = "Jesse Shen";
+	private String email = "zephyrstx@gmail.com";
+	private String phoneNumber = "4086566106";
 	
 	public BankAccount() {
 		// TODO Auto-generated constructor stub
 	}
-	
 	public BankAccount (int accountNumber, double balance, String customerName, String email, String phoneNumber){
 		this.accountNumber = accountNumber;
 		this.balance = balance;
@@ -23,11 +22,26 @@ public class BankAccount {
 		System.out.println("The account balance is: " + this.balance);
 		return this.balance;
 	}
+	public int getAccountNumber(){
+		System.out.println("The account number is: " + this.accountNumber);
+		return this.accountNumber;
+	}
+	public String getcustomerName(){
+		System.out.println("The customer name is: " + this.customerName);
+		return this.customerName;
+	}
+	
+	public void setcustomerName(String customerName){
+		this.customerName = customerName;
+		System.out.println("Customer name set-up successful!");
+	}
 	public void setEmail(String email){
 		this.email = email;
+		System.out.println("Email set-up successful!");
 	}
 	public void setPhoneNumber(String phoneNumber){
 		this.phoneNumber = phoneNumber;
+		System.out.println("Phone number set-up successful!");
 	}
 	
 
