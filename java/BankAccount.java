@@ -44,7 +44,7 @@ public class BankAccount {
 		System.out.println("Phone number set-up successful!");
 	}
 	
-
+	//To allow the customer to deposit funds (this should increment the balance field).
 	public void deposit(double amount){
 		if (amount > 50){
 			System.out.println("Exceeds the daily limit.");
@@ -53,10 +53,16 @@ public class BankAccount {
 			System.out.println("Deposit Successful! Current balance is: " + this.balance);
 		}
 	}
+	//To allow the customer to withdraw funds. This should deduct from the balance field, 
+	//but not allow the withdrawal to complete if their are insufficient funds and print the balance with name of customer
 	public void withdraw(double amount){
 		if (amount > this.balance){
 			System.out.println("There isn't sufficient balance in the account.");
-		} else{
+		} 
+		else if(amount > 100){
+			System.out.println("The amount exceeds the daily limit.");
+		}
+		else{
 			this.balance -= amount;
 			System.out.println("Withdraw Successful! Current balance is: " + this.balance);
 		}
