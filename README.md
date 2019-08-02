@@ -1,3 +1,3 @@
 # git-demo
 new java and maven project added
-test 4
+test 6
