@@ -1,2 +1,2 @@
 # git-demo
-new line
+new java and maven project added
